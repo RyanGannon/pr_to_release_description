@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo '${{ toJSON(github) }}' | jq .event.pull_request._links.issue.href
+        run: echo '${{ toJSON(github) }}' | jq -r .event.pull_request._links.issue.href
